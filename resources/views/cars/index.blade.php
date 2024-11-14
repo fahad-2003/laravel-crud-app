@@ -7,20 +7,17 @@ List cars
 @section('mainContent')
     <h1 class="page-title">List of Cars</h1>
 
-    <!-- Search Form -->
     <form class="search-form" method="GET" action="{{ route('cars.index') }}">
         <input type="text" name="search" placeholder="Search by Name or Company" class="search-input" value="{{ request('search') }}">
         <button type="submit" class="btn-search">Search</button>
     </form>
 
-    <!-- Success Message -->
     @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
         </div>
     @endif
 
-    <!-- Cars Table -->
     <table class="car-list-table">
         <thead>
             <tr>
@@ -47,7 +44,6 @@ List cars
         </tbody>
     </table>
 
-    <!-- Pagination Links -->
     <div class="pagination-links">
         {{ $cars->links() }}
     </div>
@@ -59,7 +55,6 @@ List cars
 
 @section('styles')
     <style>
-        /* General Styles */
         .page-title {
             text-align: center;
             font-size: 28px;

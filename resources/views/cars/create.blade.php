@@ -11,25 +11,21 @@ Create a new car
         <fieldset>
             <legend>Create a new car</legend>
 
-            <!-- Name input -->
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input id="name" name="name" type="text" placeholder="Enter Name" class="form-control">
             </div>
 
-            <!-- Color input -->
             <div class="form-group">
                 <label for="color">Color:</label>
                 <input id="color" name="color" type="text" placeholder="Enter color" class="form-control">
             </div>
 
-            <!-- Company input -->
             <div class="form-group">
                 <label for="company">Company:</label>
                 <input id="company" name="company" type="text" placeholder="Enter company name" class="form-control">
             </div>
 
-            <!-- Submit button -->
             <div class="form-group">
                 <button id="submit" name="submit" class="btn-submit">Save</button>
             </div>

@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'CRUD Operation using Laravel')</title>
 
-    <!-- You can add your custom styles here -->
     @yield('styles')
 
     <style>
-        /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -39,7 +37,6 @@
             text-align: center;
         }
 
-        /* Footer */
         footer {
             position: fixed;
             bottom: 10px;
@@ -49,7 +46,6 @@
             font-size: 14px;
         }
 
-        /* Additional Button Styles */
         .btn {
             background-color: #007bff;
             color: white;
@@ -64,7 +60,6 @@
             background-color: #0056b3;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .container {
                 padding: 10px;

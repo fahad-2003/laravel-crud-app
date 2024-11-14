@@ -7,7 +7,6 @@ Update / Delete car
 @section('mainContent')
     <h2 class="page-title">Update/Delete Car</h2>
 
-    <!-- Update Form -->
     <form class="car-form" method="POST" action="{{ route('cars.update', $car->id) }}">
         @csrf
         @method('put')
@@ -35,7 +34,6 @@ Update / Delete car
         </fieldset>
     </form>
 
-    <!-- Delete Form -->
     <form class="car-form" method="POST" action="{{ route('cars.destroy', $car->id) }}">
         @csrf
         @method('delete')
@@ -62,7 +60,6 @@ Update / Delete car
 
 @section('styles')
     <style>
-        /* General Styles */
         .page-title {
             text-align: center;
             font-size: 28px;

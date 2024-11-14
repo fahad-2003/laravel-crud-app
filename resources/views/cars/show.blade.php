@@ -15,7 +15,6 @@
 
 @section('styles')
     <style>
-        /* General Styles for Page */
         .page-title {
             text-align: center;
             font-size: 28px;
