@@ -47,7 +47,5 @@ The project demonstrates key Laravel features including routing, Eloquent ORM, B
 ### **Routes**
    - Route resourcing is used for car-related actions, making the routes for creating, updating, and deleting cars more intuitive and RESTful.
    
-   Example of defined routes:
-   ```php
-   Route::resource('cars', CarController::class);
+  
 
