@@ -45,7 +45,7 @@ The project demonstrates key Laravel features including routing, Eloquent ORM, B
    - **CSS**: Custom CSS is used to style the application, enhancing the visual appeal and ensuring the UI is responsive.
 
 ### **Routes**
-   - Route resourcing is used for car-related actions, making the routes for creating, updating, and deleting cars more intuitive and RESTful.
+   - Route resourcing is used for car-related actions, making the routes for creating, updating, and deleting cars more intuitive and RESTful..
    
   
 
