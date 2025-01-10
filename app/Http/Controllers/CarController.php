@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Gate;
 use App\Models\Car;
 use Illuminate\Http\Request;
 
@@ -31,19 +31,22 @@ class CarController extends Controller
 
     
     public function store(Request $request)
-    {
-        $validatedData = request()->validate([
-            'name' => ['required','min:3'],
-            'color' => 'required',
-            'company' => 'required'
-        ]);
+{
+    $validatedData = $request->validate([
+        'name' => ['required', 'min:3'],
+        'color' => 'required',
+        'company' => 'required',
+    ]);
 
-    
+    $validatedData['user_id'] = auth()->id();  
 
-        Car::create($validatedData);
+    Car::create($validatedData);
 
-        return redirect()->route('cars.index')->with('success', 'Car created successfully!');
-    }
+    return redirect()->route('cars.index')->with('success', 'Car created successfully!');
+}
+
+
+
 
     
     public function show(Car $car)
@@ -54,9 +57,17 @@ class CarController extends Controller
 
     
     public function edit(Car $car)
-    {
-        return view('cars.edit', compact('car'));
+{
+    if (Gate::denies('edit-car', $car)) {
+        abort(403, 'Unauthorized action.');
     }
+
+    return view('cars.edit', compact('car'));
+}
+
+    
+
+
 
 
     public function update(Request $request, Car $car)

@@ -9,7 +9,9 @@
     </div>
 
     <div class="edit-link">
-        <a href="{{$car->id}}/edit" class="btn-edit">Edit Car</a>
+    @can('update-car', $car)
+    <a href="{{ route('cars.edit', $car) }}">Edit Car</a>
+    @endcan
     </div>
 @endsection
 

@@ -37,6 +37,25 @@
             text-align: center;
         }
 
+        .navbar {
+            background-color: #007bff;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             position: fixed;
             bottom: 10px;
@@ -72,6 +91,24 @@
     </style>
 </head>
 <body>
+
+    <!-- Navbar with Logout -->
+    <div class="navbar">
+        <h3>Laravel CRUD App</h3>
+        <div>
+            <a href="{{ route('cars.index') }}">Cars</a>
+            <a href="{{ route('logout') }}" 
+   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+   Logout
+</a>
+
+        </div>
+    </div>
+
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    @csrf
+</form>
+
 
     <div class="container well">
         <h2 class="text-center">Assignment Of Laravel</h2>
